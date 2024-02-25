@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: #212121;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+::selection {
+  color: #000;
+  background-color: #FFDD95;
+}
+
+.animatedtext {
+  padding: 10px 0;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, #FFDD95 10%, hsl(0, 0%, 30%) 20%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+
+  60% {
+    background-position: 600px;
+  }
+
+  100% {
+    background-position: 900px;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: '';
+  font-size: 25px;
+  line-height: 0;
+  color: #FFDD95;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon svg {
+  display: inline-block;
+  color: #FFDD95;
+  font-size: 25px;
+}
+
+.ant-modal .ant-modal-content {
+  background-color: #2c281f;
+  color: white;
+}
+
+.ant-modal .ant-modal-title {
+  background-color: #2c281f;
+  color: #FFDD95;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+svg.ml-1.h-7.w-7 {
+  color: #FFDD95;
+  /* opacity: 1 !important; */
+}
