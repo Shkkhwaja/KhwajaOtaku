@@ -23,6 +23,8 @@ const SearchSkeleton = () => {
                 <Skeleton className=' aspect-[3/4] h-full w-full' />
                 <Skeleton className='' />
             </div>
+            
+
         </div>
     )
 }

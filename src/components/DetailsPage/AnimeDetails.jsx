@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { MdFavorite } from "react-icons/md";
 import { FaStar, FaRankingStar, FaYoutube } from "react-icons/fa6";
 import { BsCollectionPlay } from "react-icons/bs";
+import PopularSkeleton from "../Skeleton/PopularSkeleton";
 
 const AnimeDetails = () => {
   const { animeId } = useParams();
@@ -24,7 +25,7 @@ const AnimeDetails = () => {
         );
         const data = await response.json();
         setAnimeDetails(data.data);
-        setIsLoading(false);
+        // setIsLoading(false);
         setGenre(data.data.genres);
         setTheme(data.data.themes);
       } catch (error) {
@@ -33,13 +34,15 @@ const AnimeDetails = () => {
       }
     };
     // console.log(genre);
-    fetchAnimeDetails();
+    setTimeout(() => {
+      fetchAnimeDetails();
+    }, 1000);
   }, [animeId]);
 
   return (
     <div>
       {isLoading ? (
-        <p>Loading...</p>
+        <PopularSkeleton />
       ) : (
         <>
           <div className="w-full px-5 md:px-5 lg:px-40 md:flex gap-5 py-2 md:py-10 bg-gradient-to-b from-[#25200c]">
