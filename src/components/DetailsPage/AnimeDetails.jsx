@@ -25,7 +25,7 @@ const AnimeDetails = () => {
         );
         const data = await response.json();
         setAnimeDetails(data.data);
-        // setIsLoading(false);
+        setIsLoading(false);
         setGenre(data.data.genres);
         setTheme(data.data.themes);
       } catch (error) {
@@ -34,9 +34,8 @@ const AnimeDetails = () => {
       }
     };
     // console.log(genre);
-    setTimeout(() => {
       fetchAnimeDetails();
-    }, 1000);
+
   }, [animeId]);
 
   return (

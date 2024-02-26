@@ -35,9 +35,7 @@ const MangaDetails = () => {
             }
         };
 
-        setTimeout(() => {
-          fetchMangaDetails();
-        }, 1000);
+        fetchMangaDetails();
     }, [mangaId]);
 
     return (
